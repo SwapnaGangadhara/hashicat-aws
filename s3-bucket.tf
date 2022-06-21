@@ -1,11 +1,6 @@
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-
+module "s3-bucket" {
+  source  = "app.terraform.io/swapnagangadhara-training/s3-bucket/aws"
+  version = "3.3.0"
   bucket = "SwapnaGangdhara"
-  acl    = "private"
-
-  versioning = {
-    enabled = true
-  }
-
+  
 }
